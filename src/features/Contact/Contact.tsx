@@ -1,5 +1,5 @@
 "use client"
-import { FormEventHandler } from "react"
+import { FormEventHandler, useState } from "react"
 import {
   Container,
   Content,
@@ -13,22 +13,19 @@ import {
 import emailjs from "@emailjs/browser"
 
 function Contact() {
+  const [message, setMessage] = useState("")
+
   const handleSubmit: FormEventHandler = (
     e: React.FormEvent<HTMLTextAreaElement>
   ) => {
     e.preventDefault()
 
-    if (!e.target) return
-    if (!Object.hasOwn(e.target, "message")) return
-
     const servide_id: string = process.env.NEXT_PUBLIC_SERVICE_ID || "",
       template_id: string = process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
       user_id: string = process.env.NEXT_PUBLIC_USER_ID || ""
 
-    const message = e.currentTarget.value
-
     emailjs.send(servide_id, template_id, { message }, user_id).finally(() => {
-      e.currentTarget.value = ""
+      setMessage("")
     })
   }
 
@@ -39,7 +36,10 @@ function Contact() {
 
       <Content>
         <Form onSubmit={handleSubmit}>
-          <Textarea />
+          <Textarea
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+          />
           <Submit>Enviar</Submit>
         </Form>
         <ImageContainer>

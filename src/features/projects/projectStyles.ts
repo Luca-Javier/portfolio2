@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const GridProjects = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   margin-top: 4rem;
 

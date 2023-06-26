@@ -10,7 +10,11 @@ export const Container = styled.div`
 
   @media ${props => props.theme.breakpoints.lg} {
     width: 80%;
+    margin: 0 auto;
+  }
 
+  @media ${props => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr;
     margin: 0 auto;
   }
 `

@@ -44,6 +44,10 @@ export const LinksItems = styled.div`
   @media ${props => props.theme.breakpoints.sm} {
     gap: 0 2rem;
   }
+
+  @media ${props => props.theme.breakpoints.md} {
+    display: none;
+  }
 `
 
 export const SocialItems = styled.div`

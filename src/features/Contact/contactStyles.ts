@@ -17,6 +17,12 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   height: 100%;
+
+  @media ${props => props.theme.breakpoints.md} {
+    flex-direction: column-reverse;
+    height: auto;
+    padding: 2rem 0;
+  }
 `
 
 export const Form = styled.form`
@@ -38,6 +44,11 @@ export const ImageContainer = styled.div`
   img {
     width: 100%;
     object-fit: cover;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    width: 80%;
+    margin: 0 auto;
   }
 `
 

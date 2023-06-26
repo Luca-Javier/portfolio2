@@ -48,7 +48,6 @@ export const projects: IProject[] = [
     title: "Portfolio",
     description: "El portfolio que estás viendo ahora mismo",
     image: "/portfolio.png",
-    link: "https://portfolio2.vercel.app",
     source: "https://github.com/Luca-Javier/portfolio2",
     technologies: ["react", "nextjs", "styled-components", "typescript"],
   },
