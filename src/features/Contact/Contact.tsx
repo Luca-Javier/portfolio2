@@ -1,4 +1,5 @@
 "use client"
+import { FormEventHandler } from "react"
 import {
   Container,
   Content,
@@ -12,7 +13,9 @@ import {
 import emailjs from "@emailjs/browser"
 
 function Contact() {
-  const handleSubmit = (e: React.FormEvent<HTMLTextAreaElement>) => {
+  const handleSubmit: FormEventHandler = (
+    e: React.FormEvent<HTMLTextAreaElement>
+  ) => {
     e.preventDefault()
 
     if (!e.target) return

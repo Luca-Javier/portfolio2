@@ -1,6 +1,6 @@
 import { GradientText } from "@/styles/globalComponents/GradientText"
 import NextImage from "next/image"
-import { styled } from "styled-components"
+import styled from "styled-components"
 
 export const Relative = styled.div`
   position: relative;

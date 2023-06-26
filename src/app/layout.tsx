@@ -24,10 +24,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider theme={theme}>
-          <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-            <GlobalStyles />
-            {children}
-          </StyleSheetManager>
+          <GlobalStyles />
+          {children}
         </ThemeProvider>
       </body>
     </html>

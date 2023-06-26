@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import {
   Button as ButtonStyled,
   GhostButton as GhostButtonStyled,
@@ -8,7 +9,7 @@ import Link from "next/link"
 interface IButtonProps {
   children: React.ReactNode
   onClick?: () => void
-  as?: string
+  as?: React.ElementType
   type?: string
 }
 
