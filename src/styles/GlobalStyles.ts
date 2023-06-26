@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle, withTheme } from "styled-components"
 import "./normalize.css"
 
 const GlobalStyles = createGlobalStyle`
@@ -34,4 +34,4 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
-export default GlobalStyles
+export default withTheme(GlobalStyles)

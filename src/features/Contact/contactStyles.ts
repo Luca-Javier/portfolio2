@@ -19,7 +19,9 @@ export const Content = styled.div`
   height: 100%;
 `
 
-export const Form = styled.form<{ onSubmit?: () => void }>`
+export const Form = styled.form<{
+  onSubmit?: (e: React.FormEvent<HTMLTextAreaElement>) => void
+}>`
   display: flex;
   flex-direction: column;
   gap: 1rem;

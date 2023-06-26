@@ -12,17 +12,20 @@ import {
 import emailjs from "@emailjs/browser"
 
 function Contact() {
-  const handleSubmit = (e: SubmitEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLTextAreaElement>) => {
     e.preventDefault()
 
-    const servide_id = process.env.NEXT_PUBLIC_SERVICE_ID,
-      template_id = process.env.NEXT_PUBLIC_TEMPLATE_ID,
-      user_id = process.env.NEXT_PUBLIC_USER_ID
+    if (!e.target) return
+    if (!Object.hasOwn(e.target, "message")) return
 
-    const message = e.target.message.value
+    const servide_id: string = process.env.NEXT_PUBLIC_SERVICE_ID || "",
+      template_id: string = process.env.NEXT_PUBLIC_TEMPLATE_ID || "",
+      user_id: string = process.env.NEXT_PUBLIC_USER_ID || ""
+
+    const message = e.currentTarget.value
 
     emailjs.send(servide_id, template_id, { message }, user_id).finally(() => {
-      e.target.message.value = ""
+      e.currentTarget.value = ""
     })
   }
 
