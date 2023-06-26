@@ -65,6 +65,7 @@ export const Textarea = styled.textarea.attrs({
   color: ${props => props.theme.colors.primary};
   border: 1px solid ${props => props.theme.colors.primary};
   background: ${props => props.theme.colors.gradient3};
+  box-shadow: 0 0 15px #000;
 `
 
 export const Submit = styled.button.attrs({

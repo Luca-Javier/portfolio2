@@ -11,15 +11,28 @@ interface IButtonProps {
   onClick?: () => void
   as?: React.ElementType
   type?: string
+  notBlank?: boolean
 }
 
 export function Button(props: IButtonProps) {
-  return <ButtonStyled {...props}>{props.children}</ButtonStyled>
+  const notBlank = props.notBlank
+    ? {}
+    : { target: "_blank", rel: "noopener noreferrer" }
+
+  return (
+    <ButtonStyled {...props} {...notBlank}>
+      {props.children}
+    </ButtonStyled>
+  )
 }
 
 export function GhostButton(props: IButtonProps) {
+  const notBlank = props.notBlank
+    ? {}
+    : { target: "_blank", rel: "noopener noreferrer" }
+
   return (
-    <GhostButtonStyled {...props}>
+    <GhostButtonStyled {...props} {...notBlank}>
       <span>{props.children}</span>
     </GhostButtonStyled>
   )
@@ -30,16 +43,24 @@ interface ILinkButtonProps extends IButtonProps {
 }
 
 export function LinkButton(props: ILinkButtonProps) {
+  const notBlank = props.notBlank
+    ? {}
+    : { target: "_blank", rel: "noopener noreferrer" }
+
   return (
-    <ButtonStyled as={Link} {...props}>
+    <ButtonStyled as={Link} {...props} {...notBlank}>
       {props.children}
     </ButtonStyled>
   )
 }
 
 export function LinkGhotskButton(props: ILinkButtonProps) {
+  const notBlank = props.notBlank
+    ? {}
+    : { target: "_blank", rel: "noopener noreferrer" }
+
   return (
-    <GhostButtonStyled as={Link} {...props}>
+    <GhostButtonStyled as={Link} {...props} {...notBlank}>
       <span>{props.children}</span>
     </GhostButtonStyled>
   )

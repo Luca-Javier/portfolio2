@@ -1,9 +1,10 @@
 import styled from "styled-components"
 
-export const Button = styled.a.attrs({
-  target: "_blank",
-  rel: "noopener noreferrer",
-})<{ onClick?: () => void }>`
+export const Button = styled.a<{
+  onClick?: () => void
+  target?: string
+  rel?: string
+}>`
   padding: 1rem 2rem;
   font-weight: 700;
   border-radius: 15px;
