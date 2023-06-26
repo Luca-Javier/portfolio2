@@ -20,7 +20,7 @@ function ProjectCard(props: IProject) {
     <Border>
       <Container>
         <Relative>
-          <Image src={props.image} alt={props.title} />
+          <Image src={props.image} alt={props.title} fill />
         </Relative>
 
         <Content>

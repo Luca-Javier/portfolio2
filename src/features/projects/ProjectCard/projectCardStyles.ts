@@ -43,7 +43,7 @@ export const Container = styled.article`
   max-width: 380px;
 `
 
-export const Image = styled.img.attrs({ as: NextImage })`
+export const Image = styled(NextImage)`
   transition: transform 0.3s ease-in-out, object-position 0.3s ease-in-out;
   object-fit: cover;
   transform: scale(1.2);
