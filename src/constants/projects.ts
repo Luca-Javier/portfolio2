@@ -27,6 +27,15 @@ export const projects: IProject[] = [
     technologies: ["react", "nextjs", "nodejs", "i18n"],
   },
   {
+    title: "Fulfio",
+    description:
+      "Aplicación de incidencias con sistema de ticketing, chat y login hecho con angular y php",
+    image: "/fulfio.png",
+
+    source: "https://github.com/Luca-Javier/fulfio",
+    technologies: ["angular", "php", "mysql", "sass"],
+  },
+  {
     title: "What is GPT-3",
     description:
       "Diseño moderno sobre que es GPT-3, armado tal cual el diseño en figma",

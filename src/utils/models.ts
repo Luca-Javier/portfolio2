@@ -14,6 +14,7 @@ type TTechnology =
   | "sass"
   | "styled-components"
   | "chakraui"
+  | "angular"
 
 export interface IProject {
   title: string

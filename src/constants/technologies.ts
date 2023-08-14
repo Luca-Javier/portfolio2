@@ -7,6 +7,7 @@ import {
   TbBrandReact,
   TbBrandRedux,
   TbBrandTypescript,
+  TbBrandAngular,
 } from "react-icons/tb"
 import {
   SiChakraui,
@@ -34,4 +35,5 @@ export const technologies = {
   sass: SiSass,
   html: AiFillHtml5,
   "styled-components": SiStyledcomponents,
+  angular: TbBrandAngular,
 }
